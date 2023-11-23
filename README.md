@@ -33,11 +33,22 @@ Done! you can build custom ROMs (make sure to read guide on manifest/android rep
 NOTE: you can set specific branches by adding `-b $BRANCHNAME`
 - Device tree :
   ```sh
+  # default branch, which is for Android 14
   git clone https://github.com/alternoegraha/device_xiaomi_fog device/xiaomi/fog
+
+  # use this branch if you want to build Android 13
+  git clone -b lineage-20-new https://github.com/alternoegraha/device_xiaomi_fog device/xiaomi/fog
+
+  # use this branch if you want to build Android 13, and use OSS kernel
+  git clone -b lineage-20-oss https://github.com/alternoegraha/device_xiaomi_fog device/xiaomi/fog
   ```
 - Vendor tree :
   ```sh
+  # default branch, which is for Android 14
   git clone https://github.com/alternoegraha/vendor_xiaomi_fog vendor/xiaomi/fog
+
+  # use this branch if you want to build Android 13
+  git clone -b lineage-20-new https://github.com/alternoegraha/vendor_xiaomi_fog vendor/xiaomi/fog
   ```
 - Kernel prebuilt (do not clone if you're using OSS kernel) :
   ```sh
