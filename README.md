@@ -1,5 +1,6 @@
 # how-to-build
 > *ROM building guide for Xiaomi Redmi 10C (fog)*
+> - the guide still work in progress i guess*
 ## System requirements
 Before building ROM, you need a computer or server with these specifications:
 - Ubuntu Linux OS (latest version is recommended, other distro can work but untested)
@@ -29,8 +30,24 @@ curl -s https://storage.googleapis.com/git-repo-downloads/repo.asc | gpg --verif
 ```
 Done! you can build custom ROMs (make sure to read guide on manifest/android repo)
 ## Resources
-- Device tree : https://github.com/alternoegraha/device_xiaomi_fog
-- Vendor tree : https://github.com/alternoegraha/vendor_xiaomi_fog
-- Kernel prebuilt : https://github.com/alternoegraha/device_xiaomi_fog-kernel
-- Kernel headers : https://github.com/alternoegraha/kernel_xiaomi_fog_header
-- Kernel OSS (unstable) : https://github.com/alternoegraha/kernel_xiaomi_fog
+NOTE: you can set specific branches by adding `-b $BRANCHNAME`
+- Device tree :
+  ```sh
+  git clone https://github.com/alternoegraha/device_xiaomi_fog device/xiaomi/fog
+  ```
+- Vendor tree :
+  ```sh
+  git clone https://github.com/alternoegraha/vendor_xiaomi_fog vendor/xiaomi/fog
+  ```
+- Kernel prebuilt (do not clone if you're using OSS kernel) :
+  ```sh
+  git clone https://github.com/alternoegraha/device_xiaomi_fog-kernel device/xiaomi/fog-kernel
+  ```
+- Kernel headers :
+  ```sh
+  git clone https://github.com/alternoegraha/kernel_xiaomi_fog_header kernel/xiaomi/fog
+  ```
+- Kernel OSS (unstable) :
+  ```sh
+  git clone https://github.com/alternoegraha/kernel_xiaomi_fog kernel/xiaomi/fog
+  ```
