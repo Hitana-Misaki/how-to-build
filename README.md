@@ -44,11 +44,11 @@ after that, you need to fetch ROM sources (repo init) and sync it
 
 If syncing ROM sources is done, next is clone device tree
 ```sh
-# Android 14
-git clone -b fourteen-oss https://github.com/alternoegraha/device_xiaomi_fog device/xiaomi/fog
+# Android 15
+git clone --depth=1 -b fifteen https://github.com/alternoegraha/device_xiaomi_fog device/xiaomi/fog
 
-# Android 13
-git clone -b lineage-20-oss https://github.com/alternoegraha/device_xiaomi_fog device/xiaomi/fog
+# Android 14
+git clone --depth=1 -b fourteen-qpr3 https://github.com/alternoegraha/device_xiaomi_fog device/xiaomi/fog
 
 # clone hardware/xiaomi as well
 # remove the comment (#) in 'git clone ... hardware/xiaomi' line at vendorsetup.sh
@@ -73,31 +73,31 @@ NOTE: you can set specific branches by adding `-b $BRANCHNAME`
 - Device tree :
   ```sh
   # default branch, which is for Android 14
-  git clone https://github.com/alternoegraha/device_xiaomi_fog device/xiaomi/fog
+  git clone --depth=1 https://github.com/alternoegraha/device_xiaomi_fog device/xiaomi/fog
 
-  # use this branch if you want to build Android 13
-  git clone -b lineage-20-new https://github.com/alternoegraha/device_xiaomi_fog device/xiaomi/fog
+  # use this branch if you want to build Android 15
+  git clone --depth=1 -b fifteen https://github.com/alternoegraha/device_xiaomi_fog device/xiaomi/fog
 
-  # use this branch if you want to build Android 13, and use OSS kernel
-  git clone -b lineage-20-oss https://github.com/alternoegraha/device_xiaomi_fog device/xiaomi/fog
+  # use this branch if you want to build Android 14, and use OSS kernel
+  git clone --depth=1 -b pixelbuilds https://github.com/alternoegraha/device_xiaomi_fog device/xiaomi/fog
   ```
 - Vendor tree :
   ```sh
-  # default branch, which is for Android 14
-  git clone https://github.com/alternoegraha/vendor_xiaomi_fog vendor/xiaomi/fog
+  # default branch, which is for Android 15
+  git clone --depth=1 -b fifteen https://github.com/alternoegraha/vendor_xiaomi_fog vendor/xiaomi/fog
 
-  # use this branch if you want to build Android 13
-  git clone -b lineage-20-new https://github.com/alternoegraha/vendor_xiaomi_fog vendor/xiaomi/fog
+  # use this branch if you want to build Android 14
+  git clone --depth=1 -b fourteen https://github.com/alternoegraha/vendor_xiaomi_fog vendor/xiaomi/fog
   ```
-- Kernel prebuilt (do not clone if you're using OSS kernel) :
+- Kernel prebuilt (do not clone if you're using OSS kernel // Avoid using it when not needed - OSS kernel is more stable, fp issue has been fixed) :
   ```sh
-  git clone https://github.com/alternoegraha/device_xiaomi_fog-kernel device/xiaomi/fog-kernel
+  git clone --depth=1 https://github.com/alternoegraha/device_xiaomi_fog-kernel device/xiaomi/fog-kernel
   ```
 - Kernel headers :
   ```sh
-  git clone https://github.com/alternoegraha/kernel_xiaomi_fog_header kernel/xiaomi/fog
+  git clone --depth=1 https://github.com/alternoegraha/kernel_xiaomi_fog_header kernel/xiaomi/fog
   ```
-- Kernel OSS (unstable) :
+- Kernel OSS :
   ```sh
-  git clone https://github.com/alternoegraha/kernel_xiaomi_fog kernel/xiaomi/fog
+  git clone --depth=1 -b another-reset https://github.com/alternoegraha/wwy_kernel_xiaomi_fog_rebase kernel/xiaomi/fog
   ```
